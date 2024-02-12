@@ -1,0 +1,68 @@
+:root {
+    --gameboard-width: 320px;
+    --gameboard-height: 320px;
+    --gameboard-dimensions: 3;
+    --gameboard-bgcolor: black;
+    --gameboard-color: greenyellow;
+    --accent-color: purple;
+}
+
+body, html {
+    text-align: center;
+    background-color: black;
+    color: greenyellow;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://backiee.com/static/wpdb/wallpapers/7680x4320/289646.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.gameboard {
+    display: flex;
+    background-color: black;
+    width: var(--gameboard-width);
+    height: var(--gameboard-height);
+    border: 10px solid var(--accent-color);
+    border-radius: 8px;
+    opacity: .95;
+    flex-wrap: wrap;
+}
+
+.game-row {
+    display: flex;
+    background-color: gray;
+    width: calc(var(--gameboard-width));
+    height: calc((var(--gameboard-height) / (var(--gameboard-dimensions))));
+}
+
+.empty {
+    background-color: var(--gameboard-bgcolor);
+    box-sizing: border-box;
+    width: calc((var(--gameboard-width) / (var(--gameboard-dimensions))));
+    height: calc((var(--gameboard-height) / (var(--gameboard-dimensions))));
+}
+
+.X, .O {
+    background-color: var(--gameboard-bgcolor);
+    box-sizing: border-box;
+    font-size: 88px;
+    color: var(--gameboard-color);
+    width: calc((var(--gameboard-width) / (var(--gameboard-dimensions))));
+    height: calc((var(--gameboard-height) / (var(--gameboard-dimensions))));
+}
+
+button {
+    background-color: var(--accent-color);
+    color: lightblue;
+    padding: 8px;
+    min-width: 100px;
+    border-radius: 8px;
+}
+
